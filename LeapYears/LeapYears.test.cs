@@ -33,7 +33,7 @@ namespace LeapYears
     {
         internal static bool ValidarAñoBisiesto(int año)
         {
-            if (año == 1996) 
+            if (año % 4 == 0) 
                 return true;
 
             return false;
