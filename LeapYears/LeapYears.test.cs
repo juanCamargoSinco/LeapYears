@@ -36,41 +36,15 @@ namespace LeapYears
             Assert.False(añoBisiesto);
         }
 
-        [Fact]
-        public void Debe_devolver_true_si_el_año_es_divisible_por_4_por_100_y_por_400()
+        [Theory]
+        [InlineData(1600)]
+        [InlineData(2400)]
+        [InlineData(3200)]
+        public void Debe_devolver_true_si_el_año_es_divisible_por_4_por_100_y_por_400(int año)
         {
-            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(1600);
+            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(año);
             Assert.True(añoBisiesto);
         }
 
-        [Fact]
-        public void Debe_devolver_true_si_el_año_es_3200_ya_que_es_divisible_por_4_por_100_y_por_400()
-        {
-            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(3200);
-            Assert.True(añoBisiesto);
-        }
-
-    }
-
-    internal class ProcesadorAños
-    {
-        internal static bool ValidarAñoBisiesto(int año)
-        {
-            if (año % 4 == 0)
-            {
-                if (año % 100 == 0)
-                {
-                    if (año % 400 == 0)
-                        return true;
-
-                    return false;
-                }
-
-                return true;
-            }
-
-
-            return false;
-        }
     }
 }
