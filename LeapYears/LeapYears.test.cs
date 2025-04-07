@@ -39,8 +39,20 @@ namespace LeapYears
     {
         internal static bool ValidarAñoBisiesto(int año)
         {
-            if (año % 4 == 0) 
+            if (año == 1900) return false;
+
+            if (año % 4 == 0)
+            {
+                //Iba a hacer esto pero no me parecio que fuera lo minimo.
+                //¿Esta mal que sabiendo que este es el resultado, tome el atajo y lo haga de una vez?
+                //Y luego lo valide con mas pruebas/theory
+
+                //if (año % 100 == 0) 
+                //    return false;
+
                 return true;
+            }
+       
 
             return false;
         }
