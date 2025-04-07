@@ -18,6 +18,13 @@ namespace LeapYears
             Assert.True(añoBisiesto);
         }
 
+        [Fact]
+        public void Debe_devolver_año_es_bisiesto_si_el_año_es_divisible_por_4()
+        {
+            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(2004);
+            Assert.True(añoBisiesto);
+        }
+
 
 
     }
