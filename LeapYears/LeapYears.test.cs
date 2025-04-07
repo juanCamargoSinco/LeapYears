@@ -11,6 +11,14 @@ namespace LeapYears
             Assert.False(añoBiciesto);
         }
 
+        [Fact]
+        public void Debe_devolver_true_si_el_año_es_biciesto()
+        {
+            bool añoBiciesto = ProcesadorAños.ValidarAñoBiciesto(1996);
+            Assert.True(añoBiciesto);
+        }
+
+
 
     }
 
