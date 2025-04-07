@@ -5,17 +5,17 @@ namespace LeapYears
     public class LeapYearsTest
     {
         [Fact]
-        public void Debe_devolver_false_si_el_año_no_es_biciesto()
+        public void Debe_devolver_false_si_el_año_no_es_bisiesto()
         {
-            bool añoBiciesto = ProcesadorAños.ValidarAñoBiciesto(1993);
-            Assert.False(añoBiciesto);
+            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(1993);
+            Assert.False(añoBisiesto);
         }
 
         [Fact]
-        public void Debe_devolver_true_si_el_año_es_biciesto()
+        public void Debe_devolver_true_si_el_año_es_bisiesto()
         {
-            bool añoBiciesto = ProcesadorAños.ValidarAñoBiciesto(1996);
-            Assert.True(añoBiciesto);
+            bool añoBisiesto = ProcesadorAños.ValidarAñoBisiesto(1996);
+            Assert.True(añoBisiesto);
         }
 
 
@@ -24,7 +24,7 @@ namespace LeapYears
 
     internal class ProcesadorAños
     {
-        internal static bool ValidarAñoBiciesto(int año)
+        internal static bool ValidarAñoBisiesto(int año)
         {
             if (año == 1996) 
                 return true;
