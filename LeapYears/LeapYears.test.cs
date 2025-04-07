@@ -18,7 +18,7 @@ namespace LeapYears
     {
         internal static bool ValidarAñoBiciesto(int año)
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }
